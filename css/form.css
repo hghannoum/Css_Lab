@@ -1,0 +1,226 @@
+:root {
+  --main-color: #2c5f2d;
+  --sec-color: #97bc62ff;
+}
+* {
+  margin: 0;
+  font-family: "Modelica", Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+::selection {
+  color: initial;
+  background-color: var(--sec-color);
+}
+.img::after {
+  content: "";
+  background-color: var(--main-color);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.parent {
+  background: var(--main-color);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  accent-color: var(--main-color);
+}
+.form-container h1 {
+  display: none;
+  font-size: 25px;
+  color: var(--main-color);
+  position: relative;
+}
+.form-container span {
+  color: var(--sec-color);
+}
+.parent > h1 {
+  width: fit-content;
+  color: white;
+  font-size: 60px;
+  font-weight: 800px;
+  padding: 20px;
+}
+.parent > h1 span {
+  background-color: white;
+  color: var(--main-color);
+  padding: 0 10px;
+}
+form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+}
+.form-container {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 560px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.photo {
+  width: 200px;
+  height: 40px;
+  display: block;
+  margin-top: -30px;
+}
+.photo .Upload-btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 200px;
+  background: #f3f3f3;
+  font-weight: normal;
+  transition: background-color 0.3s;
+}
+.Upload-btn:hover {
+  background-color: rgb(218, 218, 218);
+}
+#id {
+  display: none;
+}
+.em {
+  grid-column: span 2;
+}
+.fn input,
+.ln input,
+.tel input,
+.date input,
+select {
+  width: 200px;
+}
+.em input,
+.nat select {
+  width: 420px;
+}
+.nat {
+  grid-column: span 2;
+}
+.form-container input,
+select {
+  border: none;
+  background-color: #f3f3f3;
+  margin-top: 10px;
+  height: 40px;
+  caret-color: var(--main-color);
+  padding: 0 10px;
+}
+input:focus {
+  outline-color: var(--sec-color);
+}
+input[type="reset"],
+input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 60px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  z-index: 1;
+  transition: all 0.3s;
+}
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: white;
+  box-shadow: 0 0 15px rgb(196, 195, 195);
+  transform: scale(1.05);
+}
+input[type="reset"]:hover {
+  color: red;
+}
+input[type="submit"]:hover {
+  color: var(--main-color);
+}
+input[type="reset"] {
+  background-color: red;
+}
+label {
+  font-weight: 500;
+}
+input[type="submit"] {
+  background-color: var(--main-color);
+}
+.gen {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gen .male label,
+.gen .female label {
+  font-weight: normal;
+}
+.gen input {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.buttons {
+  display: flex;
+  grid-column: span 2;
+  justify-content: space-between;
+}
+/* Font Faces */
+/* ****************************** */
+@font-face {
+  font-family: "Modelica";
+  src: url(../Fonts/BwModelica-Regular.woff) format("woff");
+  font-weight: normal, 400;
+  font-style: normal;
+}
+/* ****************************** */
+@font-face {
+  font-family: "Modelica";
+  src: url(../Fonts/BwModelica-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+/* ****************************** */
+@font-face {
+  font-family: "Modelica";
+  src: url(../Fonts/BwModelica-Bold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* ****************************** */
+@font-face {
+  font-family: "Modelica";
+  src: url(../Fonts/BwModelica-Black.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@media (max-width: 1290px) {
+  .form-container {
+    width: 100%;
+  }
+  .form-container h1 {
+    display: initial;
+  }
+}

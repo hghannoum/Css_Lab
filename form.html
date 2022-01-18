@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/form.css" />
+  <link rel="icon" href="./images/syringe-solid.svg"> 
+</head>
+
+<body>
+  <div class="parent">
+    <h1>Enter Your <br><span>Personal Information:</span></h1>
+    <div class="form-container">
+      <h1>Enter Your <span>Personal Information:</span></h1>
+      <form action="">
+        <div class="fn">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" required />
+        </div>
+        <div class="ln">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" required />
+        </div>
+        <div class="em">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="tel">
+          <label>Telephone Number:</label>
+          <input type="tel" />
+        </div>
+        <div class="date">
+          <label>Date of Birth:</label>
+          <input type="date" />
+        </div>
+        <div class="nat">
+          <label for="Nationality">Nationality:</label>
+          <select name="Nationality" id=" nationality">
+            <option value="">Lebanese</option>
+            <option value="">Syrian</option>
+            <option value="">Palestinian</option>
+            <option value="">Other</option>
+          </select>
+        </div>
+        <div class="id">
+          <label for="Id-Type">ID Type:</label>
+          <select name="Id-Type" id="id-type">
+            <option value="id">National ID</option>
+            <option value="">Passport</option>
+            <option value="">Civil Status Extract</option>
+            <option value="">Refugee Card</option>
+          </select>
+        </div>
+        <div class="photo">
+          <label>Upload ID Photo:</label>
+          <label for="id" class="Upload-btn">Browse...</label>
+          <input type="file" id="id" />
+        </div>
+        <div class="gen">
+          <label>Gender:</label><br>
+          <div class="male">
+            <input type="radio" name="gender" id="Male" />
+            <label for="Male">Male</label>
+          </div>
+          <div class="female">
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label><br />
+          </div>
+        </div>
+        <div class="buttons">
+          <input type="reset" />
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+    <div class="img">
+      <img src="./images/Research.jpg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
